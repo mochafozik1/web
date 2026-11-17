@@ -1,0 +1,199 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.container {
+    width: 1000px;
+    height: 600px;
+    border: thin solid black;
+    position: relative;
+}
+
+.patch1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: greenyellow;
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);
+}
+
+.patch2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background-color: coral;
+    clip-path: polygon(0 100%, 100px 0, 100% 100%, 0 100%);
+}
+
+.patch3 {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    background-color: gold;
+    clip-path: polygon(200px 0, 0 400px, 100% 534px, 500px 0, 200px 0);
+}
+
+.patch4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    background-color: aquamarine;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100px 534px, 0 0);
+}
+
+/* Самостоятельное упражнение 26.5: лоскут с ценой */
+.patch5 {
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    width: 280px;
+    height: 120px;
+    background-color: navy;
+    color: white;
+    font: bold 36pt sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 30%, 20% 0, 100% 20%, 80% 100%, 10% 90%, 0 30%);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 600px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px 40px;
+    clip-path: path('M 30 0 L 120 20 250 0 420 30 580 10 L 600 80 580 220 420 250 250 230 120 250 30 220 0 100 Z');
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+header h1 {
+    font: bold 42pt sans-serif;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+header h2 {
+    font: bold italic 28pt sans-serif;
+    margin: 0;
+    padding: 0;
+}
+=======
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.container {
+    width: 1000px;
+    height: 600px;
+    border: thin solid black;
+    position: relative;
+}
+
+.patch1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: greenyellow;
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);
+}
+
+.patch2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background-color: coral;
+    clip-path: polygon(0 100%, 100px 0, 100% 100%, 0 100%);
+}
+
+.patch3 {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    background-color: gold;
+    clip-path: polygon(200px 0, 0 400px, 100% 534px, 500px 0, 200px 0);
+}
+
+.patch4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    background-color: aquamarine;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100px 534px, 0 0);
+}
+
+/* Самостоятельное упражнение 26.5: лоскут с ценой */
+.patch5 {
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    width: 280px;
+    height: 120px;
+    background-color: navy;
+    color: white;
+    font: bold 36pt sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 30%, 20% 0, 100% 20%, 80% 100%, 10% 90%, 0 30%);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 600px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px 40px;
+    clip-path: path('M 30 0 L 120 20 250 0 420 30 580 10 L 600 80 580 220 420 250 250 230 120 250 30 220 0 100 Z');
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+header h1 {
+    font: bold 42pt sans-serif;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+header h2 {
+    font: bold italic 28pt sans-serif;
+    margin: 0;
+    padding: 0;
+}
+>>>>>>> 59f25aec1ebd5f230f77be69fcacd48a8d69e189

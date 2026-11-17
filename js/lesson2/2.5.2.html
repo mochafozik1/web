@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ </head>
+ <body>
+ <form>
+ <p>
+ Дюймы: <input id="inches">
+ </p>
+ </form>
+ <p id="millimeters"></p>
+<script>
+const inches = document.getElementById('inches');
+const millimeters = document.getElementById('millimeters');
+function onInchesInput() {
+ const inchesS = this.value; // 2
+ const inchesN = parseFloat(inchesS); // 3
+ const mms = Math.round(inchesN * 25.4 * 1000) / 1000; // 4
+ millimeters.textContent = mms; // 5
+}
+inches.addEventListener('input', onInchesInput); // 1
+</script>
+ </body>
+</html>

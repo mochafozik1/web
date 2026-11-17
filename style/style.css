@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("F:/photo_2026-04-28_17-19-46.jpg");
+    background-repeat: no-repeat;
+    opacity: 0.02;
+    z-index: -1;
+}
+.bar {
+ font-variant-numeric: oldstyle-nus;
+ font-size:  larger;
+}
+table.price-list th, table.price-list td {
+ border: grey thin solid;
+ padding: 2pt;
+=======
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("F:/photo_2026-04-28_17-19-46.jpg");
+    background-repeat: no-repeat;
+    opacity: 0.02;
+    z-index: -1;
+}
+.bar {
+ font-variant-numeric: oldstyle-nus;
+ font-size:  larger;
+}
+table.price-list th, table.price-list td {
+ border: grey thin solid;
+ padding: 2pt;
+>>>>>>> 59f25aec1ebd5f230f77be69fcacd48a8d69e189
+}

@@ -1,0 +1,227 @@
+/* ===== Урок 14.3: загружаемый шрифт Caviar Dreams ===== */
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../fonts/CaviarDreams.woff);
+}
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../fonts/Caviar_Dreams_Bold.woff);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../fonts/CaviarDreams_Italic.woff);
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../fonts/CaviarDreams_BoldItalic.woff);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ===== Общее ===== */
+body {
+    font-family: Arial;
+    margin: 0;                                                   /* 15.3 */
+    background-image:
+        repeating-linear-gradient(45deg, white, blanchedalmond 1mm);   /* 19.3 */
+}
+p { font-size: 14pt; }
+p.greeting { font-size: 24pt; }
+ul {
+    font-size: 14pt;
+    list-style-type: square;
+}
+.advertising { margin-left: 30pt; }
+
+/* 15.5 + 19.3 + 19.9: блок-контейнер всего содержания */
+div.container {
+    min-width: 768px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== Шапка (15.3, 19.3, 19.8) ===== */
+header { text-align: right; }
+header h1.header1 {
+    font: bold 48pt 'Caviar Dreams', 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 18pt;
+    margin: 0;
+    padding: 12pt 8pt 0 0;
+    border-bottom: 12pt solid salmon;
+    background-color: blanchedalmond;
+    background:
+        padding-box padding-box url(../images/sushi-maguro.jpg)
+            left / auto 80% no-repeat,
+        padding-box padding-box url(../images/sushi-mexican.jpg)
+            160px / auto 80% no-repeat,
+        radial-gradient(circle farthest-side at right,
+            blanchedalmond, blanchedalmond 67%,
+            white 90%);
+}
+header h1.header2 {
+    font: 36pt Verdana;
+    letter-spacing: 8pt;
+    margin: 0;
+    padding: 0 36pt 0 0;
+}
+
+/* ===== Панель навигации (17.2) ===== */
+nav div, nav a {
+    font-size: 24pt;
+    margin: 10px 0px;
+}
+nav a {
+    color: maroon;
+    text-decoration: none;
+    display: block;
+}
+nav a:active, nav a:hover {
+    color: blanchedalmond;
+    background-color: maroon;
+}
+
+/* ===== Основное содержимое ===== */
+main h2 {                                                        /* 14.9 */
+    font-size: 28pt;
+    text-transform: uppercase;
+}
+
+/* ===== Поддон (15.10) ===== */
+footer address {
+    font: italic bold 20pt 'Caviar Dreams', 'Trebuchet MS', sans-serif;
+    background-color: blanchedalmond;
+    border-bottom: thick solid salmon;
+    padding: 4pt 8pt;
+}
+footer p {
+    margin-bottom: 0;
+    padding: 0 8pt 40pt 0;
+}
+
+/* ===== Списки (13.9, 16.3) ===== */
+ul li::marker {
+    font-size: 150%;
+    color: orange;
+}
+ol { list-style-type: upper-roman; }
+ol li::marker { color: orange; }
+
+/* ===== HTML-значок (14.7) ===== */
+i.icon-drink {
+    content: url(../images/large.webp);
+    height: 1em;
+}
+
+/* ===== Каталоги блюд (13.5, 13.9, 14.3, 14.9, 16.3, 17.5) ===== */
+table.catalog td { border-bottom: black thin dotted; }
+table.catalog tr:last-child td { border-bottom: none; }
+table.catalog td:first-child { width: 33%; }
+table.catalog img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+table.catalog h3 {
+    font-family: 'Caviar Dreams', 'Trebuchet MS', sans-serif;
+    font-size: 32pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 10pt;
+}
+table.catalog h3::after { content: ':'; }
+table.catalog h3 + p::first-letter {
+    font-size: 150%;
+    background-color: blanchedalmond;
+    vertical-align: top;
+}
+
+/* ===== Прайс-лист (13.5, 13.11) ===== */
+table.price-list th[colspan=2] { text-align: center; }
+table.price-list td:last-child:not(td:only-child) {
+    border: none;
+    background-color: lightgrey;
+}
+table.price-list td[rowspan] { font-size: larger; }
+
+/* ===== Веб-форма заказа (18.3, 18.6) ===== */
+form {
+    width: min-content;
+    padding: 0 10pt;
+    margin-bottom: 10pt;
+    border: thin dotted orange;
+    border-radius: 5pt;
+}
+input, select, textarea {
+    font: 12pt monospace;
+    border: medium solid orange;
+    border-radius: 5pt;
+    padding: 5pt;
+}
+input:required + span::after, 
+select:required + span::after {
+    font: 24pt monospace;
+    content: '*';
+    vertical-align: top;
+}
+input:user-valid, select:user-valid { border-color: green; }
+input:user-invalid, select:user-invalid { border-color: red; }
+
+input[type=checkbox], input[type=radio] {
+    appearance: none;
+    width: 1ex;
+    height: 1ex;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    outline: solid orange;
+    outline-offset: 2pt;
+    margin: 0 8pt 0 4px;
+    vertical-align: middle;
+}
+input[type=radio] { border-radius: 50%; }
+input[type=checkbox]:checked, input[type=radio]:checked {
+    background-color: orange;
+}
+
+/* ===== Макет: рамочный на сеточной разметке (урок 25.5) ===== */
+body {
+    width: 100vw;
+    height: 100vh;
+}
+div.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav    main"
+        "footer footer";
+}
+header {
+    grid-area: header;
+    text-align: right;
+}
+nav {
+    grid-area: nav;
+    background: no-repeat center bottom 15px / 160px url(../images/large.webp),
+        blanchedalmond;                                          /* чашка мате под ссылками */
+    padding: 20px 20px 200px;
+    border-radius: 10px;
+    margin: 10px 0 10px 10px;
+    overflow-y: auto;
+}
+main {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 0 10pt 0 20pt;
+}
+footer {
+    grid-area: footer;
+    text-align: right;
+}

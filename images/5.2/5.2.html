@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Дюймы в миллиметры</title>
+ </head>
+ <body>
+  <p>
+   <input id="inches" type="number" step="any"> дюймов
+  </p>
+  <p>Это <output id="millimeters"></output></p>
+
+  <script>
+   const format = {
+    style: 'unit',
+    unit: 'millimeter',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+   };
+
+   const inches = document.getElementById('inches');
+   const millimeters = document.getElementById('millimeters');
+
+   function onInchesInput() {
+    const inchesN = parseFloat(inches.value);
+    const mms = inchesN * 25.4;
+    millimeters.textContent = mms.toLocaleString('ru-RU', format);
+   }
+
+   inches.addEventListener('input', onInchesInput);
+  </script>
+ </body>
+</html>

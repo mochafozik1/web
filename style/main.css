@@ -1,0 +1,129 @@
+<<<<<<< HEAD
+video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+body {
+    margin: 0pt;
+    background-color: black;
+}
+.heading {
+    position: absolute;
+    right: 20pt;
+    top: 20pt;
+    width: 400pt;
+}
+.heading h1, .heading h2 {
+    background-image:
+        linear-gradient(to left, rgba(58, 153, 61, 0.8) 0,
+                                 rgba(58, 153, 61, 0.5) 300pt,
+                                 rgba(58, 153, 61, 0.0) 350pt);
+    color: white;
+    margin: 0;
+    padding-right: 10pt;
+    text-align: right;
+}
+.heading h1 {
+    font: bold 64pt sans-serif;
+    margin-bottom: 6pt;
+}
+.heading h2 {
+    font: bold 48pt sans-serif;
+}
+.footing {
+    position: absolute;
+    left: 20pt;
+    bottom: 20pt;
+    width: 200pt;
+}
+.footing p {
+    color: white;
+    background-color: rgba(58, 153, 61, 0.5);
+    font: 14pt sans-serif;
+    margin: 0;
+    padding: 10pt;
+}
+.footing2 {
+    position: absolute;
+    right: 20pt;
+    bottom: 20pt;
+    width: max-content;
+}
+.footing2 p {
+    text-align: right;
+    color: white;
+    background-color: rgba(58, 153, 61, 0.8);
+    font: 16pt sans-serif;
+    margin: 0;
+    padding: 10pt;
+}
+.heading, .footing, .footing2 {
+    backdrop-filter: contrast(50%) blur(4pt);
+}
+=======
+video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+body {
+    margin: 0pt;
+    background-color: black;
+}
+.heading {
+    position: absolute;
+    right: 20pt;
+    top: 20pt;
+    width: 400pt;
+}
+.heading h1, .heading h2 {
+    background-image:
+        linear-gradient(to left, rgba(58, 153, 61, 0.8) 0,
+                                 rgba(58, 153, 61, 0.5) 300pt,
+                                 rgba(58, 153, 61, 0.0) 350pt);
+    color: white;
+    margin: 0;
+    padding-right: 10pt;
+    text-align: right;
+}
+.heading h1 {
+    font: bold 64pt sans-serif;
+    margin-bottom: 6pt;
+}
+.heading h2 {
+    font: bold 48pt sans-serif;
+}
+.footing {
+    position: absolute;
+    left: 20pt;
+    bottom: 20pt;
+    width: 200pt;
+}
+.footing p {
+    color: white;
+    background-color: rgba(58, 153, 61, 0.5);
+    font: 14pt sans-serif;
+    margin: 0;
+    padding: 10pt;
+}
+.footing2 {
+    position: absolute;
+    right: 20pt;
+    bottom: 20pt;
+    width: max-content;
+}
+.footing2 p {
+    text-align: right;
+    color: white;
+    background-color: rgba(58, 153, 61, 0.8);
+    font: 16pt sans-serif;
+    margin: 0;
+    padding: 10pt;
+}
+.heading, .footing, .footing2 {
+    backdrop-filter: contrast(50%) blur(4pt);
+}
+>>>>>>> 59f25aec1ebd5f230f77be69fcacd48a8d69e189

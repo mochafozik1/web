@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Преобразователь величин в дюймы</title>
+ </head>
+ <body>
+  <p>
+   Длина (мм, см или м; без суффикса - миллиметры):
+   <input id="millimeters" size="12" placeholder="например, 5 см">
+  </p>
+  <p>В дюймах: <output id="inches"></output></p>
+
+  <script>
+   'use strict';
+
+   const format = {
+    style: 'unit',
+    unit: 'inch',
+    unitDisplay: 'long',
+    maximumFractionDigits: 2
+   };
+
+   const units = [
+    { suffixes: ['мм.', 'мм'], factor: 1 },
+    { suffixes: ['см.', 'см'], factor: 10 },
+    { suffixes: ['м.', 'м'], factor: 1000 }
+   ];
+
+   const millimeters = document.getElementById('millimeters');
+   const inches = document.getElementById('inches');
+
+   function onMillimetersInput() {
+    let s = millimeters.value.trim().toLowerCase();
+    let factor = 1;
+
+    search:
+    for (let unit of units) {
+     for (let suffix of unit.suffixes) {
+      if (s.endsWith(suffix)) {
+       factor = unit.factor;
+       s = s.slice(0, s.length - suffix.length).trim();
+       break search;
+      }
+     }
+    }
+
+    s = s.replace(',', '.');
+
+    const value = (s === '') ? NaN : Number(s);
+
+    if (Number.isNaN(value)) {
+     inches.textContent = '';
+    } else {
+     inches.textContent = (value * factor / 25.4).toLocaleString('ru-RU', format);
+    }
+   }
+
+   millimeters.addEventListener('input', onMillimetersInput);
+  </script>
+ </body>
+</html>

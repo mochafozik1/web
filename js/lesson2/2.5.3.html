@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ </head>
+ <body>
+ <form>
+ <p>
+ Угол в градусах: <input id="degrees">
+ </p>
+ </form>
+ <p id="sin"></p>
+ <p id="cos"></p>
+ <p id="tan"></p>
+<script>
+const degrees = document.getElementById('degrees');
+const sin = document.getElementById('sin');
+const cos = document.getElementById('cos');
+const tan = document.getElementById('tan');
+function onDegreesInput() {
+ const degreesN = parseFloat(this.value);
+ const radians = degreesN * Math.PI / 180;
+ sin.textContent = 'sin = ' + Math.sin(radians);
+ cos.textContent = 'cos = ' + Math.cos(radians);
+ tan.textContent = 'tan = ' + Math.tan(radians);
+}
+degrees.addEventListener('input', onDegreesInput);
+</script>
+ </body>
+</html>

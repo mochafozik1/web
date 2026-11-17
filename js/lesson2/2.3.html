@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <style>
+ img { opacity: 0.2; max-width: 400px; }
+ .hovered { opacity: 1; }
+ </style>
+ </head>
+ <body>
+ <div>
+ <img id="interactive" src="../../images/homelander.jpg">
+ </div>
+<script>
+const interactive =
+ document.getElementById('interactive'); // 1
+function onInteractiveMouseOver() { // 2
+ this.className = 'hovered'; // 4
+}
+function onInteractiveMouseOut() { // 3
+ this.className = ''; // 5
+}
+interactive.addEventListener('mouseover',
+ onInteractiveMouseOver); // 6
+interactive.addEventListener('mouseout',
+ onInteractiveMouseOut); // 7
+</script>
+ </body>
+</html>

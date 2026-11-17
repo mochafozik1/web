@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <title>Заказ блюд :: Йокогама: суши-бар</title>
+ <link rel="stylesheet" type="text/css" href="../style/style.css">
+ <link rel="stylesheet" href="../style/2.1.css">
+ </head>
+ <body>
+ <div class="container">
+ <header>
+ <h1 class="header1">Йокогама</h1>
+ <h1 class="header2">Суши-бар</h1>
+ </header>
+ <nav>
+ <a href="../index.html">Главная</a>
+ <a href="price-list.html">Прайс-лист</a>
+ <a href="sushi.html">Суши</a>
+ <a href="sashimi.html">Сашими</a>
+ <a href="rolls.html">Роллы</a>
+ <div>Заказ</div>
+ </nav>
+ <main>
+ <h2>Заказ блюд</h2>
+ <form action="mailto:order@yokogama.ru" method="post"
+  enctype="text/plain">
+  <p>
+   <label for="name">Как вас зовут?</label><br>
+   <input name="name" id="name" required>
+   <span></span>
+  </p>
+  <p>
+   <label for="dishes">Что заказываете?</label><br>
+   <select name="dishes" id="dishes" size="9" multiple required>
+    <optgroup label="Суши">
+     <option value="chukka">Чукка</option>
+     <option value="maguro">Магуро</option>
+     <option value="tobiko">Тобико</option>
+    </optgroup>
+    <optgroup label="Сашими">
+     <option value="unagi">Унаги</option>
+     <option value="hamachi">Хамачи</option>
+    </optgroup>
+    <optgroup label="Роллы">
+     <option value="kunsei-batakon">Кунсе батакон</option>
+     <option value="arigato">Аригато</option>
+     <option value="mexican">Мексиканский</option>
+    </optgroup>
+   </select>
+   <span></span>
+  </p>
+  <p>
+   <label for="phone">Ваш телефон:</label><br>
+   <input type="tel" name="phone" id="phone" required>
+   <span></span>
+  </p>
+  <fieldset>
+   <legend>Дополнительно</legend>
+   <p>
+    Упаковка:<br>
+    <input type="radio" name="package" id="package1"
+     value="standard" checked>
+    <label for="package1">Стандартная</label><br>
+    <input type="radio" name="package" id="package2" value="gift">
+    <label for="package2">Праздничная</label><br>
+    <input type="radio" name="package" id="package3" value="eco">
+    <label for="package3">Экологически чистая</label>
+   </p>
+   <p>
+    <input type="checkbox" name="urgent" id="urgent" value="yes">
+    <label for="urgent">Срочный заказ</label>
+   </p>
+   <p>
+    <label for="addenda">Примечания:</label><br>
+    <textarea name="addenda" id="addenda" cols="40" rows="6"></textarea>
+   </p>
+  </fieldset>
+  <p>
+   <button type="submit">
+    Заказать<br>
+    <img src="../images/penguin.jpg" width="80">
+   </button>
+  </p>
+ </form>
+ </main>
+ <footer>
+ <address>Наш адрес: ул Первомайская 17.</address>
+ <p>&copy; Мария бурмалдаевна.</p>
+ </footer>
+ </div>
+ </body>
+</html>
